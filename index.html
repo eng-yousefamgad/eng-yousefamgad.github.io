@@ -10,15 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0e14;
-            --card-bg: rgba(22, 27, 38, 0.75);
+            --bg-color: #060913;
+            --card-bg: rgba(15, 23, 42, 0.75);
             --text-color: #f8fafc;
             --text-muted: #94a3b8;
-            /* Industrial Automation Colors (Industrial Amber & Caution Neon) */
-            --accent-color: #f59e0b;
-            --accent-glow: rgba(245, 158, 11, 0.35);
-            --secondary-glow: rgba(234, 88, 12, 0.25);
-            --border-color: rgba(245, 158, 11, 0.15);
+            --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.4);
+            --border-color: rgba(255, 255, 255, 0.08);
         }
 
         * {
@@ -48,7 +46,7 @@
             pointer-events: none;
         }
 
-        /* Technical Industrial Grid Overlay */
+        /* Technical Grid Overlay */
         .bg-grid {
             position: fixed;
             top: 0;
@@ -57,13 +55,13 @@
             height: 100%;
             z-index: -1;
             background-image: 
-                linear-gradient(to right, rgba(245, 158, 11, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+                linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
             pointer-events: none;
         }
 
-        /* Glowing Floating Cyber Orbs (Amber/Orange) */
+        /* Glowing Floating Cyber Orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -76,7 +74,7 @@
         .orb-1 {
             width: 350px;
             height: 350px;
-            background: var(--accent-glow);
+            background: rgba(56, 189, 248, 0.18);
             top: 5%;
             left: -80px;
         }
@@ -84,7 +82,7 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: var(--secondary-glow);
+            background: rgba(129, 140, 248, 0.15);
             bottom: 5%;
             right: -80px;
             animation-delay: -5s;
@@ -100,7 +98,7 @@
             position: fixed;
             font-family: 'Fira Code', monospace;
             font-size: 0.75rem;
-            color: rgba(245, 158, 11, 0.3);
+            color: rgba(56, 189, 248, 0.25);
             white-space: nowrap;
             pointer-events: none;
             z-index: -1;
@@ -125,7 +123,7 @@
             text-align: center;
             padding: 3rem 2rem;
             border-bottom: 1px solid var(--border-color);
-            background: rgba(11, 14, 20, 0.6);
+            background: rgba(6, 9, 19, 0.6);
             backdrop-filter: blur(8px);
         }
 
@@ -146,14 +144,14 @@
 
         .profile-img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 45px rgba(245, 158, 11, 0.7);
+            box-shadow: 0 0 45px rgba(56, 189, 248, 0.7);
         }
 
         header h1 {
             font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #f59e0b, #ea580c, #f59e0b);
+            background: linear-gradient(to right, #38bdf8, #818cf8, #38bdf8);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -197,14 +195,14 @@
 
         .btn-primary {
             background-color: var(--accent-color);
-            color: #0b0e14;
+            color: #060913;
             box-shadow: 0 0 15px var(--accent-glow);
         }
 
         .btn-primary:hover {
-            background-color: #d97706;
+            background-color: #0284c7;
             color: #ffffff;
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
         }
 
         .btn-secondary {
@@ -284,13 +282,13 @@
         }
 
         .tag {
-            background-color: rgba(245, 158, 11, 0.1);
+            background-color: rgba(56, 189, 248, 0.1);
             color: var(--accent-color);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-family: 'Fira Code', monospace;
-            border: 1px solid rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         /* Experience Timeline */
@@ -357,7 +355,7 @@
             padding: 3rem 0 1rem;
             border-top: 1px solid var(--border-color);
             margin-top: 4rem;
-            background: rgba(11, 14, 20, 0.9);
+            background: rgba(6, 9, 19, 0.9);
         }
 
         .social-links {
@@ -522,7 +520,7 @@
         <p>&copy; 2026 Yousef Amgad. Built for GitHub Pages.</p>
     </footer>
 
-    <!-- Interactive Canvas Particle Script (Industrial Amber Colors) -->
+    <!-- Interactive Canvas Particle Script -->
     <script>
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
@@ -559,7 +557,7 @@
             }
 
             draw() {
-                ctx.fillStyle = '#f59e0b';
+                ctx.fillStyle = '#38bdf8';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -581,7 +579,7 @@
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < 140) {
-                        ctx.strokeStyle = `rgba(245, 158, 11, ${1 - distance / 140})`;
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${1 - distance / 140})`;
                         ctx.lineWidth = 0.6;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
